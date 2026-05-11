@@ -1,680 +1,102 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="今までなかった完全無料の学習サポート。
-早稲田卒のプロ講師が営業なしの無料指導。
-マンツーマンで徹底サポートします。">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEVEN VISION</title>
 
- <title>完全無料 英語学習サポート | 佐藤徹治</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <link rel="stylesheet" href="style.css">
 
-  :root {
-    --ink: #1a1208;
-    --ink-muted: #5a4d3a;
-    --paper: #faf8f4;
-    --paper-warm: #f5f0e8;
-    --accent: #b8860b;
-    --accent-light: #e8d5a0;
-    --accent-dark: #7a5c0a;
-    --green: #2d5a27;
-    --green-light: #e8f0e6;
-    --border: rgba(90,77,58,0.15);
-  }
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  html { scroll-behavior: smooth; }
-<meta name="google-site-verification" content="kcjAiDARz-SlB-MMBJjVjL4uAF39g-6WgM6l1GGDwiA" />
-  body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.8;
-    overflow-x: hidden;
-  }
-
-  /* ── HEADER ── */
-  header {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 3px solid var(--accent);
-  }
-  .header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-  }
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    color: var(--accent);
-    letter-spacing: 0.02em;
-  }
-  nav a {
-    color: rgba(250,248,244,0.75);
-    text-decoration: none;
-    font-size: 0.85rem;
-    margin-left: 2rem;
-    transition: color 0.2s;
-    font-weight: 400;
-  }
-  nav a:hover { color: var(--accent); }
-
-  /* ── HERO ── */
-  .hero {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 7rem 2rem 6rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 60px,
-      rgba(184,134,11,0.04) 60px,
-      rgba(184,134,11,0.04) 61px
-    );
-    pointer-events: none;
-  }
-  .free-badge {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--ink);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    padding: 0.35rem 1.2rem;
-    border-radius: 2px;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 7vw, 5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    letter-spacing: -0.01em;
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-  .hero-sub {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: rgba(250,248,244,0.7);
-    margin-bottom: 2.5rem;
-    font-weight: 400;
-  }
-  .hero-cta {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--ink);
-    padding: 1rem 3rem;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background 0.2s, transform 0.1s;
-    letter-spacing: 0.05em;
-  }
-  .hero-cta:hover {
-    background: #d4a010;
-    transform: translateY(-1px);
-  }
-
-  /* ── SECTIONS ── */
-  section { padding: 5rem 2rem; }
-  .section-inner { max-width: 900px; margin: 0 auto; }
-  .section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--ink);
-  }
-
-  /* ── WHY FREE ── */
-  .why-free {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .why-free .section-title { color: var(--paper); }
-  .why-free .section-label { color: var(--accent); }
-  .philosophy-text {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.08rem;
-    line-height: 2;
-    color: rgba(250,248,244,0.85);
-    border-left: 3px solid var(--accent);
-    padding-left: 1.75rem;
-    margin: 2rem 0;
-  }
-  .philosophy-text p { margin-bottom: 1rem; }
-  .philosophy-text p:last-child { margin-bottom: 0; }
-
-  /* ── FEATURES ── */
-  .features { background: var(--paper-warm); }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  .feature-card {
-    background: var(--paper);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 1.75rem;
-    transition: border-color 0.2s, transform 0.15s;
-  }
-  .feature-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-  .feature-icon {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-  .feature-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-    color: var(--ink);
-  }
-  .feature-desc {
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    line-height: 1.7;
-  }
-
-  /* ── PROFILE ── */
-  .profile-card {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 3rem;
-    align-items: start;
-    background: var(--paper);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2.5rem;
-    margin-top: 2.5rem;
-  }
-  @media (max-width: 600px) {
-    .profile-card { grid-template-columns: 1fr; gap: 1.5rem; }
-    .avatar-wrap { text-align: center; }
-  }
-  .avatar {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    border: 4px solid var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--accent-dark);
-    font-weight: 700;
-  }
-  .profile-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  .profile-name-ruby {
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-  }
-  .profile-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
-  }
-  .tag {
-    background: var(--green-light);
-    color: var(--green);
-    font-size: 0.78rem;
-    font-weight: 700;
-    padding: 0.3rem 0.85rem;
-    border-radius: 2px;
-    border: 1px solid rgba(45,90,39,0.2);
-  }
-  .tag.gold {
-    background: var(--accent-light);
-    color: var(--accent-dark);
-    border-color: rgba(184,134,11,0.3);
-  }
-  .profile-bio {
-    font-size: 0.95rem;
-    color: var(--ink-muted);
-    line-height: 1.9;
-  }
-
-  /* ── COURSES ── */
-  .courses { background: var(--paper-warm); }
-  .courses-list {
-    margin-top: 2.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  .course-item {
-    background: var(--paper);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    padding: 1.1rem 1.25rem;
-    border-radius: 0 4px 4px 0;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.92rem;
-    font-weight: 500;
-    transition: border-left-color 0.2s, background 0.2s;
-  }
-  .course-item:hover {
-    background: var(--accent-light);
-    border-left-color: var(--accent-dark);
-  }
-  .course-icon { font-size: 1.3rem; flex-shrink: 0; }
-
-  /* ── CONTACT ── */
-  .contact { background: var(--ink); color: var(--paper); }
-  .contact .section-title { color: var(--paper); }
-  .contact .section-label { color: var(--accent); }
-  .contact-desc {
-    color: rgba(250,248,244,0.7);
-    margin-bottom: 2.5rem;
-    font-size: 0.95rem;
-  }
-  .contact-form {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 6px;
-    padding: 2.5rem;
-    max-width: 640px;
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  @media (max-width: 580px) { .form-row { grid-template-columns: 1fr; } }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
-  }
-  .form-group label {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.18);
-    color: var(--paper);
-    padding: 0.75rem 1rem;
-    border-radius: 3px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.92rem;
-    outline: none;
-    transition: border-color 0.2s;
-    width: 100%;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: var(--accent);
-  }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: rgba(250,248,244,0.3);
-  }
-  .form-group select option { background: #1a1208; }
-  .form-group textarea { min-height: 130px; resize: vertical; }
-  .submit-btn {
-    background: var(--accent);
-    color: var(--ink);
-    border: none;
-    padding: 1rem 3rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    letter-spacing: 0.05em;
-    display: block;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .submit-btn:hover { background: #d4a010; }
-  .submit-btn:active { transform: scale(0.99); }
-  .form-note {
-    font-size: 0.78rem;
-    color: rgba(250,248,244,0.45);
-    margin-top: 1rem;
-    text-align: center;
-  }
-  .form-note a { color: var(--accent); text-decoration: none; }
-  .success-msg {
-    display: none;
-    background: var(--green-light);
-    color: var(--green);
-    border: 1px solid rgba(45,90,39,0.3);
-    padding: 1.25rem 1.5rem;
-    border-radius: 4px;
-    margin-top: 1rem;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: #0f0c06;
-    color: rgba(250,248,244,0.45);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.82rem;
-    border-top: 1px solid rgba(184,134,11,0.2);
-  }
-  footer a { color: var(--accent); text-decoration: none; }
-
-  /* ── DIVIDER ── */
-  .ornament {
-    text-align: center;
-    color: var(--accent);
-    font-size: 1.2rem;
-    letter-spacing: 0.5rem;
-    margin: 1rem 0 2rem;
-    opacity: 0.5;
-  }
-
-  /* ── MOBILE NAV ── */
-  @media (max-width: 640px) {
-    nav { display: none; }
-    .hero { padding: 5rem 1.25rem 4rem; }
-    section { padding: 3.5rem 1.25rem; }
-    .contact-form { padding: 1.5rem; }
-  }
-</style>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="header-inner">
-    <div class="logo">Free English Support</div>
-    <nav>
-      <a href="#about">代表紹介</a>
-      <a href="#why">なぜ無料？</a>
-      <a href="#courses">コース</a>
-      <a href="#contact">お問い合わせ</a>
-    </nav>
+<header class="hero">
+  <nav>
+    <div class="logo">SEVEN VISION</div>
+
+    <ul>
+      <li><a href="index.html">TOP</a></li>
+      <li><a href="talents.html">TALENTS</a></li>
+      <li><a href="audition.html">AUDITION</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content" data-aos="fade-up">
+    <h1>
+      未経験から、<br>
+      “売れる側”へ。
+    </h1>
+
+    <p>
+      プロデューサー兼社長が直接プロデュース。<br>
+      SNS時代に必要な戦略・表現・ブランディングを徹底育成。
+    </p>
+
+    <a href="audition.html" class="btn">
+      オーディション応募
+    </a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="free-badge">完全無料 — 教材費・レッスン料０円</div>
-  <h1>英語が、<em>変わる。</em><br>人生が、変わる。</h1>
-  <p class="hero-sub">あなたのレベルに合わせ、目標まで完全マンツーマンでサポートします</p>
-  <a href="#contact" class="hero-cta">無料で申し込む →</a>
+<section class="section" data-aos="fade-right">
+  <h2>ABOUT</h2>
+
+  <p>
+    SEVEN VISIONは、次世代のスターを発掘する芸能事務所。<br><br>
+
+    経験・実績・知名度は不要。<br>
+    必要なのは「本気で人生を変えたい」という覚悟だけ。
+  </p>
 </section>
 
-<!-- FEATURES -->
-<section class="features" id="features">
-  <div class="section-inner">
-    <p class="section-label">サービスの特徴</p>
-    <h2 class="section-title">なぜ選ばれるのか</h2>
-    <div class="ornament">◆ ◇ ◆</div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <div class="feature-title">完全無料</div>
-        <div class="feature-desc">教材費・レッスン料・入会金など、一切費用はかかりません。</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">👤</div>
-        <div class="feature-title">完全マンツーマン</div>
-        <div class="feature-desc">あなただけのカリキュラムを組み、二人三脚で目標達成を目指します。</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">レベル問わず歓迎</div>
-        <div class="feature-desc">ゼロから上級まで、現在のレベルに合わせた最適な指導を行います。</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <div class="feature-title">目標設定サポート</div>
-        <div class="feature-desc">TOEIC・日常英会話・ビジネス英語など、目標に合わせたプランを提案。</div>
-      </div>
-    </div>
+<section class="section dark" data-aos="zoom-in">
+  <h2>特待生制度</h2>
+
+  <div class="special-box">
+    <h3>選ばれた人材は、完全バックアップ。</h3>
+
+    <ul>
+      <li>レッスン料 全額負担</li>
+      <li>入会金 全額負担</li>
+      <li>宣材撮影費 全額負担</li>
+      <li>SNSプロデュース支援</li>
+      <li>案件獲得サポート</li>
+    </ul>
   </div>
 </section>
 
-<!-- WHY FREE -->
-<section class="why-free" id="why">
-  <div class="section-inner">
-    <p class="section-label">Philosophy</p>
-    <h2 class="section-title">なぜ無料なのか？</h2>
-    <div class="ornament">◆ ◇ ◆</div>
-    <div class="philosophy-text">
-      <p>一言でいうと、<strong>社会への還元</strong>です。</p>
-      <p>私の能力は私個人のものではなく、社会そのものに属する必要があると考えています。</p>
-      <p>生まれつきお金持ちだった、努力する環境が整っていたというラッキーな方は、努力すれば必ず報われると信じて疑いません。しかし、実際のところ生まれ育った環境や先天的な能力差などは存在します。</p>
-      <p>私は、私の持つ能力を必要とするすべての人を幸せにしたいと考えています。よって、無料で英語を可能な限り、指導いたします。</p>
-    </div>
+<section class="section" data-aos="fade-up">
+  <h2>INSTAGRAM</h2>
+
+  <div class="instagram-box">
+    <iframe
+      src="https://www.instagram.com/supersonicspeedq/embed"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true">
+    </iframe>
   </div>
 </section>
 
-<!-- PROFILE -->
-<section id="about">
-  <div class="section-inner">
-    <p class="section-label">Representative</p>
-    <h2 class="section-title">代表プロフィール</h2>
-    <div class="ornament">◆ ◇ ◆</div>
-    <div class="profile-card">
-      <div class="avatar-wrap">
-        <div class="avatar">佐藤</div>
-      </div>
-      <div>
-        <div class="profile-name">佐藤 徹治</div>
-        <div class="profile-name-ruby">Tetsuharu Sato</div>
-        <div class="profile-tags">
-          <span class="tag">早稲田大学 卒業</span>
-          <span class="tag">IT企業 アプリ開発</span>
-          <span class="tag gold">TOEIC 885点</span>
-        </div>
-        <p class="profile-bio">
-          早稲田大学卒業後、IT企業にてアプリケーション開発を行う。<br>
-          TOEIC 885点を取得。英語と IT の両方の知識・経験を活かし、<br>
-          英語学習だけでなく IT スキル全般のサポートも無料で提供しています。
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COURSES -->
-<section class="courses" id="courses">
-  <div class="section-inner">
-    <p class="section-label">Free Courses</p>
-    <h2 class="section-title">無料で受講できるコース</h2>
-    <div class="ornament">◆ ◇ ◆</div>
-    <p style="color:var(--ink-muted); font-size:0.95rem;">英語学習はもちろん、以下のコースも希望者は無料で受講いただけます。</p>
-    <div class="courses-list">
-      <div class="course-item"><span class="course-icon">🇬🇧</span>英語学習サポート（メイン）</div>
-      <div class="course-item"><span class="course-icon">📐</span>高校理系数学</div>
-      <div class="course-item"><span class="course-icon">📊</span>Excel 基礎</div>
-      <div class="course-item"><span class="course-icon">☕</span>Java 基礎</div>
-      <div class="course-item"><span class="course-icon">🗄️</span>SQL 基礎</div>
-      <div class="course-item"><span class="course-icon">🐧</span>Linux 基礎</div>
-      <div class="course-item"><span class="course-icon">🤖</span>AI 活用</div>
-      <div class="course-item"><span class="course-icon">💻</span>PC 操作</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="section-inner">
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">お問い合わせ・申し込み</h2>
-    <div class="ornament" style="opacity:0.3;">◆ ◇ ◆</div>
-    <p class="contact-desc">
-      ご質問・ご相談・申し込みはフォームまたはメール（<a href="mailto:stiaphia@gmail.com" style="color:var(--accent);">stiaphia@gmail.com</a>）にて承ります。
-    </p>
-
-    <div class="contact-form">
-      <form id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">お名前 *</label>
-            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label for="email">メールアドレス *</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="course">ご希望のコース</label>
-          <select id="course" name="course">
-            <option value="">選択してください</option>
-            <option>英語学習サポート</option>
-            <option>高校理系数学</option>
-            <option>Excel基礎</option>
-            <option>Java基礎</option>
-            <option>SQL基礎</option>
-            <option>Linux基礎</option>
-            <option>AI活用</option>
-            <option>PC操作</option>
-            <option>複数のコース</option>
-            <option>まだ決めていない</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="level">現在のレベル（英語）</label>
-          <select id="level" name="level">
-            <option value="">選択してください</option>
-            <option>ほぼゼロから</option>
-            <option>中学英語程度</option>
-            <option>高校英語程度</option>
-            <option>大学・社会人レベル</option>
-            <option>英語以外のコース希望</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">メッセージ・ご質問</label>
-          <textarea id="message" name="message" placeholder="学習の目標、ご質問など、お気軽にお書きください。"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">送信する</button>
-        <p class="form-note">
-                                                 みなさんへのお願い
-もしみなさんが今後学習により能力を高めたら、社会のためにぜひ貢献してください。(強制はしません)
-以下に、無料塾のリンクを貼っておきます。私のところでなくてもよいのでご自身の家から近いところなどを調べ若い世代へ還元していきましょう。
-
-
-提供元: 練馬つくし塾 https://share.google/radS6LkXFKeDimcae
-
-提供元: 一般社団法人ネオパレット https://share.google/UG3r0fuLKU7wGAmFC
-
-https://share.google/F283pij1Zn1s1a7yW
-
-提供元: マナビファクトリー https://share.google/yi3LLyL5Iw5i14Hep
-        </p>
-      </form>
-      <div class="success-msg" id="successMsg">
-                                        みなさんへのお願い
-もしみなさんが今後学習により能力を高めたら、社会のためにぜひ貢献してください。(強制はしません)
-以下に、無料塾のリンクを貼っておきます。私のところでなくてもよいのでご自身の家から近いところなどを調べ若い世代へ還元していきましょう。
-
-
-提供元: 練馬つくし塾 https://share.google/radS6LkXFKeDimcae
-
-提供元: 一般社団法人ネオパレット https://share.google/UG3r0fuLKU7wGAmFC
-
-https://share.google/F283pij1Zn1s1a7yW
-
-提供元: マナビファクトリー https://share.google/yi3LLyL5Iw5i14Hep
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 佐藤徹治 — 完全無料 英語学習サポート</p>
-  <p style="margin-top:0.5rem;"><a href="mailto:stiaphia@gmail.com">stiaphia@gmail.com</a></p>
+  © 2026 SEVEN VISION
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name    = document.getElementById('name').value.trim();
-  const email   = document.getElementById('email').value.trim();
-  const course  = document.getElementById('course').value;
-  const level   = document.getElementById('level').value;
-  const message = document.getElementById('message').value.trim();
-
-  const subject = encodeURIComponent('【英語学習サポート お問い合わせ】' + name + ' 様');
-  const body = encodeURIComponent(
-    'お名前: ' + name + '\n' +
-    'メールアドレス: ' + email + '\n' +
-    'ご希望のコース: ' + (course || '未選択') + '\n' +
-    '現在のレベル: ' + (level || '未選択') + '\n\n' +
-    'メッセージ:\n' + (message || '（なし）') + '\n\n' +
-    '---\n' +
-    'このメールは「完全無料 英語学習サポート」サイトのお問い合わせフォームより送信されました。'
-  );
-
-  window.location.href = 'mailto:stiaphia@gmail.com?subject=' + subject + '&body=' + body;
-
-  document.getElementById('successMsg').style.display = 'block';
+AOS.init({
+  duration: 1200,
+  once: true
 });
 </script>
 

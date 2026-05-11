@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUDITION | SEVEN VISION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="section">
+<h2>AUDITION</h2>
+
+<p class="audition-copy">
+人生を変えたい。<br>
+その気持ちがあるなら、経験はいりません。
+</p>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="お名前" required>
+
+<input type="email" id="email" placeholder="メールアドレス" required>
+
+<textarea id="message" rows="7" placeholder="志望動機・SNSアカウントなど"></textarea>
+
+<button type="submit">
+応募する
+</button>
+
+</form>
+
+<div id="successMessage"></div>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>
