@@ -1,106 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7 VISION</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Google Font -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7VISION | 次世代タレントプロダクション</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<header class="hero">
+<header class="header">
+  <div class="logo">7VISION</div>
   <nav>
-    <div class="logo">7 VISION</div>
-
-    <ul>
-      <li><a href="index.html">TOP</a></li>
-      <li><a href="talents.html">TALENTS</a></li>
-      <li><a href="audition.html">AUDITION</a></li>
-    </ul>
+    <a href="#about">ABOUT</a>
+    <a href="#talents">TALENTS</a>
+    <a href="#flow">FLOW</a>
+    <a href="#contact">AUDITION</a>
   </nav>
-
-  <div class="hero-content" data-aos="fade-up">
-    <h1>
-      未経験から、<br>
-      “売れる側”へ。
-    </h1>
-
-    <p>
-      プロデューサー兼社長が直接プロデュース。<br>
-      SNS時代に必要な戦略・表現・ブランディングを徹底育成。
-    </p>
-
-    <a href="audition.html" class="btn">
-      オーディション応募
-    </a>
-  </div>
 </header>
 
-<section class="section" data-aos="fade-right">
-  <h2>ABOUT</h2>
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <p class="mini">NEXT GENERATION TALENT AGENCY</p>
+    <h1>
+      “推される側”へ。<br>
+      人生を変える、最初の一歩。
+    </h1>
+    <p class="desc">
+      フォロワー0でも大丈夫。<br>
+      SNS時代に埋もれないタレントを育てる、次世代芸能プロダクション。
+    </p>
 
+    <div class="hero-buttons">
+      <a class="btn primary" href="#contact">LINEで応募する</a>
+      <a class="btn secondary" href="#about">7VISIONとは？</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="card">
+    <h2>98%</h2>
+    <p>未経験スタート</p>
+  </div>
+  <div class="card">
+    <h2>3ヶ月</h2>
+    <p>SNSブランディング育成</p>
+  </div>
+  <div class="card">
+    <h2>24h</h2>
+    <p>LINE応募対応</p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="section-title">
+    <span>ABOUT</span>
+    <h2>7VISIONとは</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-box">
+      <h3>才能より、“伸ばし方”。</h3>
+      <p>
+        7VISIONは、TikTok・Instagram・YouTube時代に対応した
+        次世代型の芸能育成プロダクション。
+        一人ひとりの個性を分析し、“推される魅せ方”をプロデュースします。
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h3>完全未経験OK</h3>
+      <p>
+        演技・SNS・セルフブランディング・ライブ配信・撮影サポートまで。
+        未経験でも安心してスタートできる環境を用意しています。
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h3>特待生制度あり</h3>
+      <p>
+        将来性の高い人材にはレッスン費免除制度あり。
+        本気で人生を変えたい人を、本気でサポートします。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="talents" class="talents">
+  <div class="section-title light">
+    <span>TALENTS</span>
+    <h2>所属タレント</h2>
+  </div>
+
+  <div class="talent-grid">
+    <div class="talent-card">
+      <div class="talent-image1"></div>
+      <h3>SATOSHI</h3>
+      <p>Actor / TikTok Creator</p>
+    </div>
+  <div class="talent-grid">
+    <div class="talent-card">
+      <div class="talent-image2"></div>
+      <h3>HIRO</h3>
+      <p>Actor / TikTok Creator</p>
+    </div>
+</section>
+
+<section class="copy-section">
+  <h2>
+    “普通”で終わりたくない。<br>
+    その気持ちが、才能。
+  </h2>
+  <a class="btn primary" href="#contact">今すぐ応募する</a>
+</section>
+
+<section id="flow" class="flow">
+  <div class="section-title">
+    <span>FLOW</span>
+    <h2>デビューまでの流れ</h2>
+  </div>
+
+  <div class="flow-grid">
+    <div class="flow-card">
+      <span>01</span>
+      <h3>LINE応募</h3>
+      <p>簡単30秒で応募完了。</p>
+    </div>
+
+    <div class="flow-card">
+      <span>02</span>
+      <h3>オンライン面談</h3>
+      <p>将来の夢や活動方針をヒアリング。</p>
+    </div>
+
+    <div class="flow-card">
+      <span>03</span>
+      <h3>育成スタート</h3>
+      <p>SNS・表現力・ブランディングを強化。</p>
+    </div>
+
+    <div class="flow-card">
+      <span>04</span>
+      <h3>活動開始</h3>
+      <p>配信・撮影・イベントなど本格始動。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>未来を変える準備はできてる？</h2>
   <p>
-    7 VISIONは、次世代のスターを発掘する芸能事務所。<br><br>
-
-    経験・実績・知名度は不要。<br>
-    必要なのは「本気で人生を変えたい」という覚悟だけ。
+    “いつかやりたい”で終わらせない。<br>
+    次にバズるのは、君かもしれない。
   </p>
+  <a class="btn primary large" href=https://line.me/ti/p/KAtIGZJ_hw>LINEで無料応募する</a>
 </section>
 
-<section class="section dark" data-aos="zoom-in">
-  <h2>特待生制度</h2>
-
-  <div class="special-box">
-    <h3>選ばれた人材は、完全バックアップ。</h3>
-
-    <ul>
-      <li>レッスン料 全額負担</li>
-      <li>入会金 全額負担</li>
-      <li>宣材撮影費 全額負担</li>
-      <li>SNSプロデュース支援</li>
-      <li>案件獲得サポート</li>
-    </ul>
+<footer id="contact" class="footer">
+  <div>
+    <h3>7VISION</h3>
+    <p>Next Generation Talent Agency</p>
   </div>
-</section>
 
-<section class="section" data-aos="fade-up">
-  <h2>INSTAGRAM</h2>
-
-  <div class="instagram-box">
-    <iframe
-      src="https://www.instagram.com/supersonicspeedq/embed"
-      width="100%"
-      height="600"
-      frameborder="0"
-      scrolling="no"
-      allowtransparency="true">
-    </iframe>
+  <div class="footer-links">
+    <a href=https://www.instagram.com/accounts/onetap/>Instagram</a>
+    <a href=https://line.me/ti/p/KAtIGZJ_hw>LINE</a>
   </div>
-</section>
 
-<footer>
-  © 2026 7 VISION<br>
-  所在地：<br>
-東京都豊島区長崎２丁目２５−２０
+  <div class="company">
+    <p>東京都豊島区長崎２丁目２５−２０</p>
+  </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init({
-  duration: 1200,
-  once: true
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
